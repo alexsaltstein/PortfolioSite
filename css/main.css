@@ -48,7 +48,6 @@ body{
 #footerText{
     color: #65b838;
     font-size: 22pt;
-    
 }
 .sideIcon{
      max-width: 100px;
@@ -87,31 +86,6 @@ body{
         flex-direction: column;
         justify-content: center;
         margin-top: 4.5em;
-   }
-}
-
-@media only screen and (max-height: 300px){
-    #pageTitle{
-        font-size: 35pt;
-    }
-    #footerText{
-        font-size: 12pt;
-    }
-    #profilePic{
-        max-width: 75px;
-        max-height: 75px;
-   }
-    .sideIcon{
-        max-width: 25px;
-        max-height: 25px;
-        margin-right: 10px;
-        margin-left: 10px;
-   }
-    #imagesRow{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2em;
    }
 }
 
