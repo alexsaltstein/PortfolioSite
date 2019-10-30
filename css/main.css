@@ -26,10 +26,10 @@ body{
     font-size: 75pt;
 }
 #imagesRow{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     margin-top: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6em;
 }
 #profilePic{
      max-width: 250px;
@@ -41,8 +41,8 @@ body{
     font-size: 22pt;
 }
 .sideIcon{
-     max-width: 50px;
-     max-height: 50px;
+     max-width: 100px;
+     max-height: 100px;
      margin-right: 20px;
      margin-left: 20px;
 }
@@ -50,7 +50,7 @@ body{
     opacity:0.7;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 850px){
     #pageTitle{
         font-size: 35pt;
     }
@@ -62,10 +62,19 @@ body{
         max-height: 125px;
    }
     .sideIcon{
-        max-width: 25px;
-        max-height: 25px;
-        margin-right: 10px;
-        margin-left: 10px;
+        max-width: 50px;
+        max-height: 50px;
+        margin: 10px;
+   }
+   #holder{
+       display: flex;
+       align-content: center;
+       justify-content: center;
+   }
+   #imagesRow{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
    }
 }
 
