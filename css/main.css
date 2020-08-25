@@ -234,14 +234,8 @@ a{
     background-color: #0000007D;
 }
 
-.portfolio-inner:hover, .portfolio-inner:focus{
+.portfolio-inner:hover, .portfolio-inner:focus, .portfolio-inner:active{
     opacity: 1;
-}
-
-@media(hover: hover) and (pointer: fine) {
-    .portfolio-inner:hover{
-        opacity:1;
-    }
 }
 
 .portfolio-modal-background{
