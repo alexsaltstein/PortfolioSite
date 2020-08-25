@@ -25,6 +25,12 @@ body, html{
 a{
     cursor: pointer;
 }
+.privacy-text{
+    font-family: 'PassionOne';
+    color: #224379;
+    font-size: 30px;
+    text-align: left;
+}
 .color-picker-header{
     width: 100%; 
     display:flex; 
