@@ -429,6 +429,9 @@ hr{
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 @media screen and (max-width: 1000px) {
+    #header-holder{
+        margin-top:30vh; 
+    }
     .alex-holder {
         padding: 2px 0;
         font-size: 75px;
@@ -450,6 +453,9 @@ hr{
 }
 
 @media screen and (max-width: 600px) {
+    #header-holder{
+        margin-top:10vh; 
+    }
     .alex-holder {
         padding: 2px 0;
         font-size: 35px;
