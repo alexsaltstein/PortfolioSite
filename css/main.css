@@ -237,6 +237,13 @@ a{
 .portfolio-inner:hover, .portfolio-inner:focus{
     opacity: 1;
 }
+
+@media(hover: hover) and (pointer: fine) {
+    .portfolio-inner:hover{
+        opacity:1;
+    }
+}
+
 .portfolio-modal-background{
     display: none;
     width:100%;
