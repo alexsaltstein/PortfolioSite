@@ -49,7 +49,7 @@ a{
     top:0; 
     margin-left: 5px; 
     margin-top:5px;
-    font-family: 'PassionOne-Regular';
+    font-family: "PassionOne-Regular";
     font-size: 20px;
     color: #224379;
     text-decoration:none;
@@ -345,6 +345,7 @@ a{
     color: #EDF0D8;
     font-family: 'PassionOne';
     font-size: 50px;
+    width:50%;
 }
 
 .contact-text{
@@ -445,6 +446,8 @@ hr{
     }
     .about-text{
         font-size: 40px;
+        width:70%;
+        text-align:center;
     }
     #profilePic{
         width: 250px;
