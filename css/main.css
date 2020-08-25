@@ -319,7 +319,7 @@ a{
 .about-header{
     color: #EDF0D8;
     font-family: 'PassionOne';
-    font-size: 12vw;
+    font-size: 10vw;
     text-align: center;
     white-space: nowrap;
 }
@@ -327,7 +327,7 @@ a{
 .portfolio-header{
     color: #EDF0D8;
     font-family: 'PassionOne';
-    font-size: 12vw;
+    font-size: 10vw;
     text-align: center;
     white-space: nowrap;
 }
@@ -335,7 +335,7 @@ a{
 .contact-header{
     color: #F38C81;
     font-family: 'PassionOne';
-    font-size: 12vw;
+    font-size: 10vw;
     text-align: center;
     white-space: nowrap;
 }
@@ -454,7 +454,7 @@ hr{
 
 @media screen and (max-width: 600px) {
     .container{
-        height: 80vh;
+        height: 90vh;
     }
 
     #header-holder{
