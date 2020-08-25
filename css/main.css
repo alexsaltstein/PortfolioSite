@@ -254,7 +254,6 @@ a{
     width: 85%;
     margin: 8%;
     cursor: default;
-    height: 110%;
 }
 
 #portfolio-modal-images{
@@ -397,8 +396,9 @@ a{
 }
 
 #portfolio-modal-text{
-    font: 50px 'PassionOne';
+    font: 25px 'PassionOne';
     text-align: center;
+    padding: 10px;
 }
 .portfolio-modal-content{
     display: flex;
