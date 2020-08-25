@@ -141,6 +141,8 @@ a{
     padding: 0 10px;
     width: 500px;
     z-index: 1000;
+    /* background: rgba(196,221,235,0.4); */
+    /* border-radius: 20px; */
 }
 
 .sticky + .content {
@@ -171,6 +173,7 @@ a{
     margin: 5px;
     font-size: 40px;
     text-decoration: none;
+    text-shadow: 1.5px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .active{
@@ -466,7 +469,6 @@ hr{
     .container{
         height: 90vh;
     }
-
     #header-holder{
         margin-top:15vh; 
     }
