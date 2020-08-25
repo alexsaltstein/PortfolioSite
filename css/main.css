@@ -464,7 +464,7 @@ hr{
         padding: 2px 0;
         font-size: 35px;
         height: 30px;
-        -webkit-text-stroke: 2px #F73737;
+        -webkit-text-stroke: 2px rgba(247, 55, 55, 0.5);
     }
     .nav-button{
         font-size:25px;
