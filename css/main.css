@@ -4,6 +4,16 @@
 }
 
 @font-face {
+    font-family: Poppins-bold;
+    src: url(../assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: Ave;
+    src: url(../assets/fonts/AveFedan.ttf);
+}
+
+@font-face {
     font-family: PassionOne;
     src: url(../assets/fonts/PassionOne-Regular.ttf);
 }
@@ -30,6 +40,30 @@ a{
     color: #224379;
     font-size: 30px;
     text-align: left;
+}
+.privacy-text-movier{
+    font-family: 'Poppins-bold';
+    color: white;
+    font-size: 30px;
+    text-align: left;
+}
+.movier-picker-header{
+    width: 100%; 
+    display:flex; 
+    flex-direction:row; 
+    align-items:flex-end; 
+    justify-content:center; 
+    background:#04577b; 
+    padding:10px; 
+    box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.75);
+}
+.movier-header-text{
+    font-family:'Poppins-bold'; 
+    text-align:center; 
+    margin-top:20px; 
+    font-size:50px; 
+    text-decoration:underline; 
+    color:white;
 }
 .color-picker-header{
     width: 100%; 
