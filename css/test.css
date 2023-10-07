@@ -1,0 +1,168 @@
+:root {
+  --background: #6a4c93;
+  --primary: #ffca3a;
+  --inverted: #8ac926;
+  --negative: #ff595e;
+  --surface: #1982c4;
+}
+
+html,
+body {
+  cursor: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Archivo Black", sans-serif;
+  background: var(--background);
+  color: var(--primary);
+}
+
+.heading-text {
+  font-size: 100px;
+  text-align: center;
+}
+
+.border-box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.border-box-color {
+  background: var(--primary);
+}
+
+.border-box-overlay {
+  z-index: 1;
+  border-radius: 10% 0 10% 0;
+  background: var(--background);
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 10px;
+  list-style: none;
+  font-size: 32px;
+}
+
+.center {
+  position: relative;
+  z-index: 40;
+}
+
+.list a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.list a:hover {
+  text-decoration: underline;
+  color: var(--inverted);
+  cursor: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.box {
+  width: 55vw;
+  height: 50vh;
+  animation: upDown 4s linear infinite;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.marquee {
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+  flex-shrink: 0;
+  min-width: 100%;
+  padding: 5px;
+  animation: marquee 60s linear infinite;
+}
+
+.hover {
+  -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+  animation-play-state: paused;
+}
+
+#cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 0.3s ease;
+  z-index: 40;
+}
+
+.scale-cursor {
+  transform: translate(-50%, -50%) scale(4);
+}
+
+@media screen and (max-width: 850px) {
+  .list {
+    font-size: 20px;
+  }
+
+  .heading-text {
+    font-size: 50px;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0) scale(1);
+  }
+  25% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg) scale(1.02);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes upDown {
+  0%,
+  100% {
+    transform: translateY(0%);
+  }
+  33% {
+    transform: translateY(-3px);
+  }
+  66% {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
