@@ -5,6 +5,24 @@ const removeHover = () => {
   }
 };
 
+let movingLeft = true;
+const moveTitle = () => {
+  const currTitle = document.title;
+  if (movingLeft) {
+    document.title = `${currTitle.substring(1)}${currTitle.charAt(0)}`;
+    movingLeft = document.title.charAt(0) === "-";
+  } else {
+    document.title = `${currTitle.charAt(
+      currTitle.length - 1
+    )}${currTitle.substring(0, currTitle.length - 1)}`;
+    if (document.title.charAt(document.title.length - 1) === "-") {
+      movingLeft = false;
+    } else {
+      movingLeft = true;
+    }
+  }
+};
+
 const addHover = () => {
   const marqueeElems = document.getElementsByClassName("marquee");
   for (let x = 0; x < marqueeElems.length; x++) {
@@ -78,6 +96,8 @@ const info = [
 ];
 
 window.onload = function () {
+  document.title = "-----Alex's Portfolio";
+  setInterval(moveTitle, 500);
   window.addEventListener("mousemove", editCursor);
 
   const childs = [];
