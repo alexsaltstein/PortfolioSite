@@ -11,16 +11,29 @@ body {
   cursor: none;
   margin: 0;
   padding: 0;
+  overflow-y: hidden;
 }
 
 .flip-card {
-  width: 55vw;
-  height: 50vh;
+  width: 40vw;
+  height: 33vh;
   transform-style: preserve-3d;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 10px;
-  padding: 10px;
   perspective: 1000px;
+}
+
+.flip-front-align {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-back-align {
+  position: relative;
+  padding: 10px;
 }
 
 .moving {
@@ -39,6 +52,7 @@ body {
 .flip-card-front,
 .flip-card-back {
   position: absolute;
+  border-radius: 10px;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
@@ -49,10 +63,63 @@ body {
   transform: rotateY(180deg);
 }
 
+.learn-more {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.card-image {
+  width: 250px;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
 .rotate {
   transform: rotateY(180deg) translateZ(1px);
   -webkit-transform: rotateY(180deg) translateZ(1px);
   -moz-transform: rotateY(180deg) translateZ(1px);
+}
+
+.svg {
+  width: 64;
+  height: 64;
+  fill: var(--primary);
+}
+
+.header-svg {
+  width: 64;
+  height: 64;
+  fill: var(--primary);
+}
+
+.svg:hover {
+  fill: var(--inverted);
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.tagline {
+  color: var(--primary);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-size: 50px;
 }
 
 body {
@@ -92,9 +159,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  column-gap: 10px;
+  column-gap: 15px;
   list-style: none;
-  font-size: 32px;
+  font-size: 40px;
 }
 
 .center {
@@ -125,7 +192,7 @@ body {
 .marquee {
   display: flex;
   flex-direction: row;
-  column-gap: 5px;
+  column-gap: 15px;
   flex-shrink: 0;
   min-width: 100%;
   padding: 5px;
@@ -153,12 +220,29 @@ body {
 }
 
 @media screen and (max-width: 850px) {
+  .learn-more,
+  .back-button {
+    font-size: 10px;
+  }
+  .header-svg {
+    width: 32px;
+    height: 32px;
+  }
+  .svg {
+    width: 48px;
+    height: 48px;
+  }
   .list {
     font-size: 20px;
   }
-
   .heading-text {
-    font-size: 50px;
+    font-size: 35px;
+  }
+  .tagline {
+    font-size: 20px;
+  }
+  .card-image {
+    width: 100px;
   }
 }
 

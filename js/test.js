@@ -26,9 +26,12 @@ const toggleRotate = (e) => {
   const classList = e.classList;
   const hasRotate = classList?.contains("rotate");
   if (hasRotate === true) {
-    removeHover();
-    classList.add("moving");
     classList.remove("rotate");
+    const rotatedElems = document.getElementsByClassName("rotate");
+    if (rotatedElems.length === 0) {
+      removeHover();
+    }
+    classList.add("moving");
   } else {
     addHover();
     classList.remove("moving");
@@ -44,9 +47,34 @@ const editCursor = (e) => {
 };
 
 const info = [
-  { text: "test", back: "this is the back" },
-  { text: "artichoke", back: "another back" },
-  { text: "banana", back: "anotha one" },
+  {
+    image: `<img class="card-image"  alt="forkist logo"
+    src="./assets/images/portfolio_logos/textLogo@3x_red.png">`,
+    back: "this is the back",
+    frontBackgroundColor: "#fff",
+    frontTextColor: "#e84637",
+  },
+  {
+    image: `<img class="card-image" alt="drunkful logo"
+    src="./assets/images/portfolio_logos/logo_yellow.png">`,
+    back: "this is the back",
+    frontBackgroundColor: "#FDCB45",
+    frontTextColor: "#C56211",
+  },
+  {
+    image: `<img class="card-image"  alt="scholastic logo"
+    src="./assets/images/portfolio_logos/scholasti-logo.png">`,
+    back: "this is the back",
+    frontBackgroundColor: "#ec1d25",
+    frontTextColor: "#fff",
+  },
+  {
+    image: `<img class="card-image"  alt="north of normal cbd logo"
+    src="./assets/images/portfolio_logos/North-of-Normal-CBD(transparent).png">`,
+    back: "this is the back",
+    frontBackgroundColor: "#3D8E27",
+    frontTextColor: "#fff",
+  },
 ];
 
 window.onload = function () {
@@ -54,14 +82,20 @@ window.onload = function () {
 
   const childs = [];
   for (let i = 0; i < info.length; i++) {
-    const d = document.createElement("buton");
+    const d = document.createElement("div");
     d.innerHTML = `
       <div class="flip-card-inner">
-        <div class="flip-card-front">
-        ${info[i].text}
+        <div class="flip-card-front" style="background:${info[i].frontBackgroundColor}; color:${info[i].frontTextColor}">
+        <div class="flip-front-align">
+        ${info[i].image}
+        </div>
+        <div class="learn-more">learn more</div>
         </div>
         <div class="flip-card-back">
+        <div class="flip-back-align">
+        <div class="back-button">go back</div>
         ${info[i].back}
+        </div>
         </div>
       </div>
     `;
