@@ -183,10 +183,20 @@ body {
 .content {
   display: flex;
   flex-direction: row;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   padding-top: 5vh;
   padding-bottom: 5vh;
+}
+
+.content-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-x: scroll;
+}
+
+.content-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .marquee {
@@ -243,6 +253,9 @@ body {
   }
   .card-image {
     width: 100px;
+  }
+  #cursor {
+    display: none;
   }
 }
 
