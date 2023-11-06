@@ -66,18 +66,32 @@ const editCursor = (e) => {
 
 const info = [
   {
-    image: `<img class="card-image"  alt="forkist logo"
-    src="./assets/images/portfolio_logos/textLogo@3x_red.png">`,
-    back: "this is the back",
-    frontBackgroundColor: "#fff",
-    frontTextColor: "#e84637",
-  },
-  {
     image: `<img class="card-image" alt="drunkful logo"
     src="./assets/images/portfolio_logos/logo_yellow.png">`,
     back: "this is the back",
     frontBackgroundColor: "#FDCB45",
     frontTextColor: "#C56211",
+  },
+  {
+    image: `<img class="card-image"  alt="artblocks logo"
+    src="./assets/images/portfolio_logos/artblocks.svg">`,
+    back: "this is the back",
+    frontBackgroundColor: "#000",
+    frontTextColor: "#fff",
+  },
+  {
+    image: `<img class="card-image"  alt="hudsonhapps logo"
+    src="./assets/images/portfolio_logos/hudsonhapps.svg">`,
+    back: "this is the back",
+    frontBackgroundColor: "#0068E9",
+    frontTextColor: "#fff",
+  },
+  {
+    image: `<img class="card-image"  alt="forkist logo"
+    src="./assets/images/portfolio_logos/textLogo@3x_red.png">`,
+    back: "this is the back",
+    frontBackgroundColor: "#fff",
+    frontTextColor: "#e84637",
   },
   {
     image: `<img class="card-image"  alt="scholastic logo"
