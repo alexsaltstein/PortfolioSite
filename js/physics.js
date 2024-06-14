@@ -3,6 +3,7 @@ const THICKNESS = 60;
 const elems = [];
 let engine;
 
+// disable scroll cause it makes the effect super weird
 function preventDefault(e) {
   e.preventDefault();
 }
@@ -24,15 +25,13 @@ var wheelOpt = supportsPassive ? { passive: false } : false;
 var wheelEvent =
   "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
 
-// call this to Disable
 function disableScroll() {
   window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
   window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
   window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
 }
 
-// set the new boxes somewhere not within the middle alex and within the client
-
+// set the new boxes somewhere within the width of the canvas
 const createBox = (render) => {
   const div = document.createElement("div");
 
