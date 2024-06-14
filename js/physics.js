@@ -3,6 +3,34 @@ const THICKNESS = 60;
 const elems = [];
 let engine;
 
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+var supportsPassive = false;
+try {
+  window.addEventListener(
+    "test",
+    null,
+    Object.defineProperty({}, "passive", {
+      get: function () {
+        supportsPassive = true;
+      },
+    })
+  );
+} catch (e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent =
+  "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
+}
+
 // set the new boxes somewhere not within the middle alex and within the client
 
 const createBox = (render) => {
@@ -171,6 +199,7 @@ window.onload = () => {
   window.addEventListener("resize", () =>
     handleResize(matterContainer, render, ground, ceiling, leftWall, rightWall)
   );
+  disableScroll();
 
   (function rerender() {
     elems.forEach((e) => e.render());
