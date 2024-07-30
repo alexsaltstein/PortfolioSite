@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alex Saltstein's Portfolio</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" href="./assets/images/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <img src="assets/images/icon.png" alt="AS Icon" style="display: none;">
+    <div id="top"></div>
+    <div id="header-holder">
+        <div id="buttons-holder">
+            <a href="https://github.com/alexsaltstein" class="button-wrapper" style="background-color: #F58F19;">
+                <img class="img" alt="github logo" src="./assets/images/GitHub-Mark-Light-120px-plus.png">
+            </a>
+            <a href="https://www.linkedin.com/in/alex-saltstein-1aa02a163" class="button-wrapper"
+                style="background-color: #B140D3;">
+                <span class="img">in</span>
+            </a>
+            <a href="mailto:asaltste@gmail.com" class="button-wrapper" style="background-color: #14ED2D;">
+                <img class="img" alt="email button" src="./assets/images/mail-white@2x.png">
+            </a>
+            <a href="./assets/pdfs/Saltstein_Resume.pdf" class="button-wrapper" style="background-color: #F7131C;">
+                <img class="img" alt="resume buton" src="./assets/images/briefcase2-white@2x.png">
+            </a>
+        </div>
+        <a href="#about"><img id="arrow" class="heartbeat" alt="arrow" src="./assets/images/yello-arrow.png"></a>
+    </div>
+    <div class="container">
+        <div id="holder"></div>
+    </div>
+
+    <div id="about" class="content">
+        <div id="nav">
+            <a href="#top" id="home-button" class="nav-button">home</a>
+            <a href="#about" id="about-button" class="nav-button active">about</a>
+            <a href="#portfolio" id="portfolio-button" class="nav-button">portfolio</a>
+            <a href="#contact" id="contact-button" class="nav-button">contact</a>
+        </div>
+        <div id="spacer"></div>
+        <h1 class="about-header">I do computer stuff.</h1>
+        <div class="flex-row-holder" style="height: 75%;">
+            <span class="about-text">I am currently a computer science student at Stevens Institute of Technology
+                graduating in 2021.
+                <br><br>
+                And yeah, I love to program. Primarily in React, Node.js, and React Native.</span>
+            <div style="padding:0 2em;"><img src="assets/images/profile_pic.jpg" alt="Profile Pic" id="profilePic">
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <br>
+        <br>
+        <br>
+        <div id="portfolio-modal-background" class="close-modal portfolio-modal-background">
+        </div>
+        <div id="portfolio-modal" class="portfolio-modal">
+            <a class="close-modal" id="x">&#10006</a>
+            <div class="portfolio-modal-content">
+                <h1 id="portfolio-modal-title"></h1>
+                <div class="modal-arrows-holder">
+                    <a id="modal-left-arrow"><img style="transform:rotate(90deg); width:100px"
+                            src="./assets/images/yello-arrow.png"></a>
+                    <a id="modal-right-arrow"><img style="transform:rotate(-90deg); width:100px"
+                            src="./assets/images/yello-arrow.png"></a>
+                </div>
+                <div id="portfolio-modal-images"></div>
+                <div id="modal-image-dots"></div>
+                <div class="alignment"><a id="portfolio-modal-link"></a></div>
+                <hr style="width: 95%;">
+                <div id="portfolio-modal-text"></div>
+            </div>
+        </div>
+        <h1 class="portfolio-header">Stuff I have done.</h1>
+        <div class="flex portfolio-btn-holder">
+            <div class="portfolio-btn" style="background: #FDCB45">
+                <img style="position: absolute; width: 250px; z-index:1" alt="drunkful logo"
+                    src="./assets/images/portfolio_logos/logo_yellow.png">
+                <div class="portfolio-inner" onclick="">
+                    Designed, developed, and published application available on Apple and Google Play store.
+                    <a class="portfolio-learn-more" id="drunkful-link">Learn More</a>
+                </div>
+            </div>
+            <div class="portfolio-btn" style="background: white">
+                <img style="position: absolute; width: 250px; z-index:1" alt="forkist logo"
+                    src="./assets/images/portfolio_logos/textLogo@3x_red.png">
+                <div class="portfolio-inner" onclick="">
+                    Implemented website to promote soon to be released mobile application.
+                    <br>
+                    <br>
+                    <a class="portfolio-learn-more" id="forkist-link">Learn More</a>
+                </div>
+            </div>
+            <div class="portfolio-btn" style="background: #ec1d25">
+                <img style="position: absolute; width: 250px; z-index:1" alt="scholastic logo"
+                    src="./assets/images/portfolio_logos/scholasti-logo.png">
+                <div class="portfolio-inner" onclick="">
+                    Worked in an agile development cycle to create custom salesforce components on the crm team.
+                    <a class="portfolio-learn-more" id="scholastic-link">Learn More</a>
+                </div>
+            </div>
+            <div class="portfolio-btn" style="background: #3D8E27">
+                <img style="position: absolute; width: 250px; z-index:1" alt="north of normal cbd logo"
+                    src="./assets/images/portfolio_logos/North-of-Normal-CBD(transparent).png">
+                <div class="portfolio-inner" onclick="">
+                    Implemented technology for online and retail store. Set up website, pos, and inventory systems.
+                    <br>
+                    <br>
+                    <a class="portfolio-learn-more" id="north-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="content">
+        <br>
+        <br>
+        <br>
+        <h1 class="contact-header">Thanks for reading.</h1>
+        <div class="flex-row-holder" style="margin-top: 4em;">
+            <a class="contact-text" href="./assets//pdfs/Saltstein_Resume.pdf">my resume</a>
+            <a class="contact-text" href="mailto:asaltste@gmail.com">email me</a>
+        </div>
+    </div>
+    <div class="hrbase"></div>
+
+</body>
+
+</html>
