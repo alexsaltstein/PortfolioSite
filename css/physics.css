@@ -1,11 +1,105 @@
+:root {
+  --background: #6a4c93;
+  --primary: #ffca3a;
+  --inverted: #8ac926;
+  --negative: #ff595e;
+  --surface: #1982c4;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+#add-box-button {
+  border: 3px solid var(--primary);
+  padding: 10px 15px;
+  color: var(--primary);
+  background: none;
+  border-radius: 4px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+#add-box-button:hover {
+  color: var(--inverted);
+  border-color: var(--inverted);
+}
+
+body {
+  font-family: "Archivo Black", sans-serif;
+  background: var(--background);
+  color: var(--primary);
+}
+
 .box {
   position: absolute;
-  background: #111;
-  color: #eee;
-  height: 100px;
-  width: 100px;
   cursor: move;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.box-text {
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box-text:hover {
+  text-decoration: underline white;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-svg {
+  width: 64;
+  height: 64;
+  fill: var(--primary);
+}
+
+.heading-text {
+  font-size: 100px;
+  text-align: center;
+}
+
+.tagline {
+  color: var(--primary);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-size: 50px;
+}
+
+#profilePic {
+  object-fit: cover;
+  width: 90px;
+  height: 90px;
+  border-radius: 4px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.center {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +119,21 @@
   overflow: hidden;
 }
 
-html,
-body {
-  margin: 0;
+@media screen and (max-width: 850px) {
+  .header-svg {
+    width: 32px;
+    height: 32px;
+  }
+  .heading-text {
+    font-size: 35px;
+  }
+  .tagline {
+    font-size: 20px;
+  }
+  #add-box-button {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-width: 1px;
+    margin-top: 12px;
+  }
 }
